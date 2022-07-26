@@ -15,8 +15,6 @@ for filename in os.listdir(os.getcwd()):
 		for l in lines:
 			splitline = l.split()
 			labelname = ' '.join(map(str,splitline[:-4]))
-			print(labelname)
-			print(data['names'])
 			rep = l.replace(labelname,str(data['names'].index(labelname)))
 			newlines.append(rep)
 		with open(filename,"w") as outfile:
